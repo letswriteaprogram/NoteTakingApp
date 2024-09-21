@@ -1,31 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
+import ProtectedRoute from "./components/util/ProtectedRoute";
+import DashBoard from "./components/DashBoard";
 import { useDispatch, useSelector } from "react-redux";
-import { addUser } from "./features/userSlice";
+import { fetchCurrentUser } from "./features/UserSlice";
 
 function App() {
-  const User = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
-  const [user, setUser] = useState("");
-  function handlerSubmit(e) {
-    e.preventDefault();
-    dispatch(addUser(user));
-  }
+  const auth = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (!auth.user) {
+      dispatch(fetchCurrentUser()); // Fetch current user if not authenticated
+    }
+  }, [auth.user, dispatch]);
   return (
-    <section className="flex justify-center items-center flex-col">
-      <h1>{User ? `Hello, ${User}` : "No user added"}</h1> {/* Display User */}
-      <form onSubmit={handlerSubmit}>
-        <input
-          type="text"
-          value={user}
-          onChange={(e) => {
-            setUser(e.target.value);
-          }}
-          placeholder="Enter username"
+    <Router>
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <DashBoard />
+            </ProtectedRoute>
+          }
         />
-        <button type="submit">Add user</button>
-      </form>
-    </section>
+      </Routes>
+    </Router>
   );
 }
-
 export default App;
