@@ -4,7 +4,7 @@ import BoardList from "./board/BoardList";
 import Addboard from "./board/Addboard";
 import { useSelector } from "react-redux";
 import { useSidebar } from "../context/SidebarContext";
-
+import { FaGithub } from "../icon/Icon";
 function Sidebar() {
   const { isSidebarOpen } = useSidebar();
   const boards = useSelector((state) => state.boards.boards);
@@ -23,6 +23,9 @@ function Sidebar() {
         <BoardList />
       </div>
       <Addboard />
+      <a className="text-black absolute bottom-5 left-2 z-20" href="https://github.com/letswriteaprogram/NoteTakingApp">
+        <FaGithub className="text-4xl " />
+      </a>
     </section>
   );
 }
