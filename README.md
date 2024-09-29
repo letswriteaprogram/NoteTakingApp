@@ -9,7 +9,7 @@
 ## Tech Stack
 React | Redux | React Router | Appwrite | Context API | React Quill Editor
 
-💻 [Live Link: Check it out here! 🎉](https://notetakingapp05.netlify.app/login)
+💻 [Live Link: Check it out here! 🎉](https://notetakingapp05.netlify.app)
 
 I took inspiration from [@YouTuberName]’s tutorials, which not only helped me improve my understanding of frontend development but also gave me the confidence to build a full-fledged project from scratch. Thank you for sharing such great content! 🙌
 
