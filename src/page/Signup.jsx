@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { signupUser } from "../features/UserSlice";
+import { signupUser } from "../features/userSlice";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import Input from "./util/Input";
-import Button from "./util/Button";
+import Input from "../components/util/Input";
+import Button from "../components/util/Button";
 
 function Signup() {
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ function Signup() {
       navigate("/login");
     } catch (err) {
       console.error("Signup failed", err);
-      setErrors({ server: "Signup failed. Please try again." });
+      setErrors({ server: err });
     } finally {
       setIsSubmitting(false);
     }
@@ -66,7 +66,7 @@ function Signup() {
             onChange={(e) => setName(e.target.value)}
             placeholder="Enter Username"
             required
-            message={errors.name}
+            message={errors?.name}
           />
 
           <Input
@@ -76,7 +76,7 @@ function Signup() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter Email"
             required
-            message={errors.email}
+            message={errors?.email}
           />
 
           <div className="relative">
@@ -87,7 +87,7 @@ function Signup() {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter Password"
               required
-              message={errors.password}
+              message={errors?.password}
             />
           </div>
 
@@ -100,7 +100,7 @@ function Signup() {
             <Link to="/login" className="cursor-pointer font-semibold">
               Log in
             </Link>{" "}
-            here to access your dashboard!
+            here to access your notes board!
           </p>
         </form>
       </div>

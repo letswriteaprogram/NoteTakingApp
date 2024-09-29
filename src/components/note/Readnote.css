@@ -1,0 +1,178 @@
+.Note {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1rem; /* Reset line height for .Note */
+}
+
+/* Heading styles */
+.Note h1, .ql-editor h1 {
+    font-size: 2em; /* Typically around 32px */
+    margin: 0.67em 0; /* Default margin */
+    line-height: normal; /* Reset line height */
+}
+
+.Note h2, .ql-editor h2 {
+    font-size: 1.5em; /* Typically around 24px */
+    margin: 0.83em 0; /* Default margin */
+    line-height: normal; /* Reset line height */
+}
+
+.Note h3, .ql-editor h3 {
+    font-size: 1.17em; /* Typically around 18.7px */
+    margin: 1em 0; /* Default margin */
+    line-height: normal; /* Reset line height */
+}
+
+.Note h4, .ql-editor h4 {
+    font-size: 1em; /* Typically around 16px */
+    margin: 1.33em 0; /* Default margin */
+    line-height: normal; /* Reset line height */
+}
+
+.Note h5, .ql-editor h5 {
+    font-size: 0.83em; /* Typically around 13.3px */
+    margin: 1.67em 0; /* Default margin */
+    line-height: normal; /* Reset line height */
+}
+
+.Note h6, .ql-editor h6 {
+    font-size: 0.67em; /* Typically around 10.7px */
+    margin: 2.33em 0; /* Default margin */
+    line-height: normal; /* Reset line height */
+}
+
+/* Paragraph style */
+.Note p, .ql-editor p {
+    font-size: 1em; /* Typically around 16px */
+    margin: 1em 0; /* Default margin */
+    line-height: normal; /* Reset line height */
+}
+
+/* Blockquote style */
+.Note blockquote, .ql-editor blockquote {
+    border-left: 4px solid #ddd; /* Left border */
+    padding-left: 15px; /* Indent text */
+    margin: 1em 0; /* Default margin */
+    font-style: italic; /* Italic text */
+    color: #666; /* Lighter text color */
+    line-height: normal; /* Reset line height */
+}
+
+/* Unordered list styles */
+.Note ul, .ql-editor ul {
+    list-style-type: disc; /* Default bullet style */
+    margin: 1em 0; /* Default margin */
+    padding-left: 20px; /* Indent list */
+    line-height: normal; /* Reset line height */
+}
+
+.Note li, .ql-editor li {
+    margin-bottom: 0.5em; /* Space between list items */
+    line-height: normal; /* Reset line height */
+}
+
+/* Ordered list styles */
+.Note ol, .ql-editor ol {
+    list-style-type: decimal; /* Numbered list */
+    margin: 1em 0; /* Default margin */
+    padding-left: 20px; /* Indent list */
+    line-height: normal; /* Reset line height */
+}
+
+/* Code block style */
+.Note code, .ql-editor code {
+    font-family: monospace; /* Monospace font */
+    background-color: #393939; /* Light background */
+    padding: 2px 4px; /* Padding around text */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Preformatted text */
+.Note pre, .ql-editor pre {
+    font-family: monospace; /* Monospace font */
+    font-size: 1em; /* Typically around 16px */
+    white-space: pre; /* Preserve whitespace */
+    background-color: #888; /* Light background */
+    padding: 10px; /* Padding around the text */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Text alignment styles */
+.Note .align-left, .ql-editor .align-left {
+    text-align: left;
+}
+
+.Note .align-center, .ql-editor .align-center {
+    text-align: center;
+}
+
+.Note .align-right, .ql-editor .align-right {
+    text-align: right;
+}
+
+/* Link styles */
+.Note a, .ql-editor a {
+    color: #3498db; /* Default link color */
+    text-decoration: underline; /* Underline links */
+}
+
+.Note a:hover, .ql-editor a:hover {
+    color: #2980b9; /* Darker link color on hover */
+}
+
+/* Emphasized text */
+.Note em, .ql-editor em {
+    font-style: italic; /* Italic text */
+}
+
+/* Strong text (bold) */
+.Note strong, .ql-editor strong {
+    font-weight: bold; /* Bold text */
+}
+
+/* Text with underline */
+.Note u, .ql-editor u {
+    text-decoration: underline; /* Underline text */
+}
+
+/* Strikethrough text */
+.Note s, .Note strike, .ql-editor s, .ql-editor strike {
+    text-decoration: line-through; /* Strikethrough effect */
+}
+
+
+/* Text indentation */
+.Note .indent, .ql-editor .indent {
+    margin-left: 20px;
+}
+
+.Note .indent-2, .ql-editor .indent-2 {
+    margin-left: 40px;
+}
+
+.Note .indent-3, .ql-editor .indent-3 {
+    margin-left: 60px;
+}
+
+/* Quill Editor Container */
+.ql-editor {
+    line-height: normal; /* Reset line height for the editor */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Default font color */
+}
+
+/* Monospace font */
+.ql-font-monospace {
+    font-family: 'Courier New', monospace; /* Set monospace font */
+}
+
+/* Serif font */
+.ql-font-serif {
+    font-family: 'Times New Roman', serif; /* Set serif font */
+}
+
+/* Sans-serif font */
+.ql-font-sans-serif {
+    font-family: 'Arial', sans-serif; /* Set sans-serif font */
+}

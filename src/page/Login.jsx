@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { fetchCurrentUser, loginUser } from "../features/UserSlice";
+import { loginUser } from "../features/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import Input from "./util/Input";
-import Button from "./util/Button";
-import Loader from "./util/Loader";
+import Input from "../components/util/Input";
+import Button from "../components/util/Button";
+import Loader from "../components/util/Loader";
 
 function Login() {
   const dispatch = useDispatch();
@@ -64,9 +64,13 @@ function Login() {
   return (
     <section className="w-full h-screen flex justify-center items-center">
       <div className="w-full max-w-xs sm:max-w-sm md:max-w-md p-4 m-4 sm:p-8 sm:m-8 border-2 border-black rounded-lg">
-        <h1 className="text-2xl text-center mb-8 mt-2">Welcome back! Please log in.</h1>
+        <h1 className="text-2xl text-center mb-8 mt-2">
+          Welcome back! Please log in.
+        </h1>
 
-        {errors.server && <p className="text-red-500 text-center">{errors.server}</p>}
+        {errors.server && (
+          <p className="text-red-500 text-center">{errors.server}</p>
+        )}
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <Input

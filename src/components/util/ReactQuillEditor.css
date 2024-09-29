@@ -1,0 +1,21 @@
+.quill-editor {
+  position: relative; /* To position the toolbar */
+  max-height: 60vh; /* Maximum height for the editor */
+  overflow: hidden; 
+  border: 1px solid black;
+  border-radius: 4px; /* Prevent overflow */
+  max-width: 90vw; /* Set maximum width to 90% of the viewport width */
+  margin: 0 auto; /* Center the editor horizontally */
+}
+
+.ql-toolbar {
+  position: sticky; /* Keep toolbar fixed while scrolling */
+  top: 0; /* Stick to the top */
+  background: white; /* Set background color */
+  z-index: 1; /* Ensure it stays on top */
+}
+
+.ql-container {
+  max-height: calc(60vh - 40px); /* Adjust this based on the height of the toolbar */
+  overflow-y: auto; /* Allow scrolling */
+}
