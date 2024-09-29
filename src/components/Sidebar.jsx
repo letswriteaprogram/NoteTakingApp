@@ -12,8 +12,8 @@ function Sidebar() {
     <section
       className={`absolute p-2 ${
         isSidebarOpen
-          ? " -translate-x-[100%] sm:translate-x-0 "
-          : "translate-x-0"
+          ? "translate-x-0"
+          : " -translate-x-[100%] sm:translate-x-0 "
       } -translate-x-10 sm:relative w-full h-[90vh] min-w-60  sm:w-[30vw] border-2 bg-gray-300  flex flex-col items-center transition-all duration-1000 z-10`}
     >
       <h1 className="text-center text-xl p-1">

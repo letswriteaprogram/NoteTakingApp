@@ -18,7 +18,7 @@ function Header() {
   };
 
   if (auth.loading) {
-    return <Loader/>; // Show a loading state while fetching user
+    return <Loader />; // Show a loading state while fetching user
   }
 
   if (!auth.user) {
@@ -35,9 +35,9 @@ function Header() {
       <div className="flex justify-center items-center gap-2">
         <Button onClick={handleLogout}>Logout</Button>
         {isSidebarOpen ? (
-          <FaBars className="sm:hidden text-2xl" onClick={toggleSidebar} />
-        ) : (
           <FaXmark className="sm:hidden text-2xl" onClick={toggleSidebar} />
+        ) : (
+          <FaBars className="sm:hidden text-2xl" onClick={toggleSidebar} />
         )}
       </div>
     </div>
