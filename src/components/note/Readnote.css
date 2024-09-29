@@ -93,7 +93,7 @@
     font-family: monospace; /* Monospace font */
     font-size: 1em; /* Typically around 16px */
     white-space: pre; /* Preserve whitespace */
-    background-color: #888; /* Light background */
+    background-color: #ddd; /* Light background */
     padding: 10px; /* Padding around the text */
     border-radius: 4px; /* Rounded corners */
 }

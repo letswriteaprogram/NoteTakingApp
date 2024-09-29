@@ -19,15 +19,21 @@ function Updatenote({ noteId = "", Name = "", Text = "" }) {
     setNoteName(Name);
     setNoteText(Text);
   }, [Name, Text]); // Update local state when props change
-
   const validate = () => {
     const newErrors = {};
     if (!noteName) newErrors.noteName = "Note Name is required";
     else if (noteName.length < 4)
       newErrors.noteName = "Note Name must be at least 4 characters";
-    if (!noteText) newErrors.noteText = "Note Text is required";
-    else if (noteText.length < 4)
+    // Check if noteText is empty or only contains whitespace
+    if (
+      !noteText ||
+      noteText.trim() === "<p><br></p>" ||
+      noteText.trim() === ""
+    ) {
+      newErrors.noteText = "Note Text is required";
+    } else if (noteText.length < 4) {
       newErrors.noteText = "Note Text must be at least 4 characters";
+    }
     return newErrors;
   };
 

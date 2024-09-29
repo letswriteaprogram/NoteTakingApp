@@ -17,7 +17,7 @@ function Readnote({ Name, Text }) {
           {Name}
         </h2>
         <p
-          className="text-xl max-h-[60vh] min-w-[50vw] max-w-[90vw] overflow-y-auto max-h- custom-scrollbar break-words border border-black p-4 Note rounded-lg"
+          className="text-xl max-h-[60vh] min-w-[80vw] sm:min-w-[60vw] max-w-[90vw]  overflow-y-auto max-h- custom-scrollbar break-words border border-black p-4 Note rounded-lg"
           dangerouslySetInnerHTML={{ __html: Text }}
         ></p>
       </Modal>

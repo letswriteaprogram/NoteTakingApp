@@ -34,7 +34,7 @@ function Noteslist() {
           <p className="w-full text-center text-2xl capitalize underline font-semibold pt-4 text-gray-600">
             {activeBoard ? activeBoard?.boardName : "Select a Board"}
           </p>
-          <div className="w-full flex flex-wrap justify-evenly gap-4 p-2 ">
+          <div className="w-full flex flex-wrap justify-evenly gap-4 p-2 mb-20">
             {notes && notes.length > 0 ? (
               notes.map((note) => <Note key={note.$id} note={note} />)
             ) : (

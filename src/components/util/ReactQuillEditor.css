@@ -1,4 +1,4 @@
-.quill-editor {
+.quill-editor{
   position: relative; /* To position the toolbar */
   max-height: 60vh; /* Maximum height for the editor */
   overflow: hidden; 
@@ -6,8 +6,39 @@
   border-radius: 4px; /* Prevent overflow */
   max-width: 90vw; /* Set maximum width to 90% of the viewport width */
   margin: 0 auto; /* Center the editor horizontally */
+  padding: unset; 
+}
+.quill-editor .ql-editor {
+  padding: 4px;
+  min-height: 80px;
+  color: black;
 }
 
+.quill-editor .ql-editor::before {
+  content: attr("");
+  color: black;
+  font-size: 1.2rem;
+  font-style: none;
+}
+.quill-editor .ql-editor p,.quill-editor .ql-editor h1,.quill-editor .ql-editor h2 {
+  margin: 2px;
+}
+.quill-editor .ql-editor p{
+  font-size: 1.2rem;
+}
+.quill-editor .ql-editor .ql-size-small{
+font-size: 1rem;
+}
+.quill-editor .ql-editor .ql-size-large{
+font-size: 1.5rem;
+}
+.quill-editor .ql-editor .ql-size-huge{
+font-size: 2rem;
+}
+.ql-editor{
+  font-size: 1rem;
+  color: black;
+}
 .ql-toolbar {
   position: sticky; /* Keep toolbar fixed while scrolling */
   top: 0; /* Stick to the top */
@@ -18,4 +49,5 @@
 .ql-container {
   max-height: calc(60vh - 40px); /* Adjust this based on the height of the toolbar */
   overflow-y: auto; /* Allow scrolling */
+  font-size: x-large;
 }
