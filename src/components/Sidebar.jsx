@@ -19,7 +19,7 @@ function Sidebar() {
       <h1 className="text-center text-xl p-1">
         Boards List{boards.length ? ` : ${boards.length}` : ""}{" "}
       </h1>
-      <div className="w-full bords_list max-h-[78vh] overflow-auto custom-scrollbar p-1 m-2 border-2 border-black rounded-xl ">
+      <div className="w-full bords_list max-h-[78vh] overflow-auto custom-scrollbar p-1 m-2 border-2 border-black rounded-lg ">
         <BoardList />
       </div>
       <Addboard />

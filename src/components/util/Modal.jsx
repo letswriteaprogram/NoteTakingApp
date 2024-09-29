@@ -9,7 +9,7 @@ function Modal({ isOpen, onClose, children }) {
   return ReactDOM.createPortal(
     <section className="fixed inset-0 w-full p-2 bg-gray-500 flex justify-center items-center z-50">
       
-      <div className="relative bg-white border border-black rounded-lg  p-8 flex justify-center items-center flex-col">
+      <div className="relative bg-white border border-black rounded-lg  py-8 px-4 flex justify-center items-center flex-col">
       <FaXmark onClick={onClose} className="absolute offset-0 top-2 right-2 text-2xl "/>
         {children}
       </div>

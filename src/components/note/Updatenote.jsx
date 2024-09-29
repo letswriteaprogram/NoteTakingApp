@@ -66,8 +66,9 @@ function Updatenote({ noteId = "", Name = "", Text = "" }) {
             value={noteText}
             onChange={setNoteText} // Directly set note text
             placeholder="Update Note Text"
+            message={errors.noteText}
           />
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center">
             <Button type="submit" disabled={loading}>
               {loading ? "Updating..." : "Update Note"}
             </Button>
